@@ -13,6 +13,7 @@
 	</properties>
 	<build>
 		<finalName>byservice-api</finalName>
+		<pluginManagement>
 		<plugins>
 		    <plugin>
 				<artifactId>maven-source-plugin</artifactId>
@@ -40,6 +41,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		</pluginManagement>
 	</build>
 
 	<profiles>
@@ -50,7 +52,7 @@
 			</activation>
 			<distributionManagement>
 				<repository>
-					<id>snapshots</id>
+					<id>nexus-snapshots</id>
 					<url>http://132.232.37.89:8081/nexus/content/repositories/snapshots</url>
 				</repository>
 			</distributionManagement>
@@ -60,31 +62,16 @@
 			<id>test</id>
 			<distributionManagement>
 				<repository>
-					<id>snapshots</id>
+					<id>nexus-snapshots</id>
 					<url>http://132.232.37.89:8081/nexus/content/repositories/snapshots</url>
 				</repository>
 			</distributionManagement>
 		</profile>
-		
-		<!-- <profile>
-			<id>uat</id>
-			<distributionManagement>
-				<repository>
-					<id>releases</id>
-					<url>http://132.232.37.89:8081/nexus/content/repositories/releases</url>
-				</repository>
-			</distributionManagement>
-			<properties>
-				<publish.version>1.0.0</publish.version>
-				<sdk.version>1.0.0</sdk.version>
-			</properties>
-		</profile> -->
-
 		<profile>
 			<id>online</id>
 			<distributionManagement>
 				<repository>
-					<id>releases</id>
+					<id>nexus-releases</id>
 					<url>http://132.232.37.89:8081/nexus/content/repositories/releases</url>
 				</repository>
 			</distributionManagement>
