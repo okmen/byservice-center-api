@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.baiyue.services</groupId>
   <artifactId>byservice-api</artifactId>
   <version>${publish.version}</version>
@@ -52,7 +51,7 @@
 			<distributionManagement>
 				<repository>
 					<id>snapshots</id>
-					<url>http://192.168.1.251:8081/nexus/content/repositories/snapshots</url>
+					<url>http://132.232.37.89:8081/nexus/content/repositories/snapshots</url>
 				</repository>
 			</distributionManagement>
 		</profile>
@@ -62,31 +61,31 @@
 			<distributionManagement>
 				<repository>
 					<id>snapshots</id>
-					<url>http://192.168.1.251:8081/nexus/content/repositories/snapshots</url>
+					<url>http://132.232.37.89:8081/nexus/content/repositories/snapshots</url>
 				</repository>
 			</distributionManagement>
 		</profile>
 		
-		<profile>
+		<!-- <profile>
 			<id>uat</id>
 			<distributionManagement>
 				<repository>
 					<id>releases</id>
-					<url>http://192.168.1.251:8081/nexus/content/repositories/releases</url>
+					<url>http://132.232.37.89:8081/nexus/content/repositories/releases</url>
 				</repository>
 			</distributionManagement>
 			<properties>
 				<publish.version>1.0.0</publish.version>
 				<sdk.version>1.0.0</sdk.version>
 			</properties>
-		</profile>
+		</profile> -->
 
 		<profile>
 			<id>online</id>
 			<distributionManagement>
 				<repository>
 					<id>releases</id>
-					<url>http://192.168.1.251:8081/nexus/content/repositories/releases</url>
+					<url>http://132.232.37.89:8081/nexus/content/repositories/releases</url>
 				</repository>
 			</distributionManagement>
 			<properties>
@@ -96,13 +95,5 @@
 		</profile>
 
 	</profiles>
-
-	<dependencies>
-		<dependency>
-			<groupId>cn.chudaokeji.lib</groupId>
-			<artifactId>common-sdk</artifactId>
-			<version>${sdk.version}</version>
-			<optional>true</optional>
-		</dependency>
-	</dependencies>
+	
 </project>
