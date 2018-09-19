@@ -80,7 +80,14 @@
 				<sdk.version>1.0.0</sdk.version>
 			</properties>
 		</profile>
-
 	</profiles>
 	
+	<dependencies>
+	    <!-- common utils -->
+		<dependency>
+			<groupId>com.utils_max</groupId>
+			<artifactId>utils-max</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  </dependencies>
 </project>
